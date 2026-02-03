@@ -47,4 +47,16 @@ func testFunc()
     print(shuffled.nextInt())
     print(shuffled.nextInt())
     print(shuffled.nextInt())
+    
+    //ex func for array shuffle
+    let lotteryBalls = [Int](1...49)
+    let shuffledBalls = GKRandomSource.sharedRandom()
+    dom().arrayByShufflingObjects(in: lotteryBalls)
+    print(shuffledBalls[0])
+    print(shuffledBalls[1])
+    print(shuffledBalls[2])
+    print(shuffledBalls[3])
+    print(shuffledBalls[4])
+    print(shuffledBalls[5])
+    
 }
