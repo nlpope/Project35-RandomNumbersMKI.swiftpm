@@ -48,9 +48,11 @@ func testFunc()
     print(shuffled.nextInt())
     print(shuffled.nextInt())
     
-    //ex func for array shuffle
+    //predictable lottery ball shuffler (rigged lottery)
     let lotteryBalls = [Int](1...49)
-    let shuffledBalls = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: lotteryBalls)
+    let shuffledBalls = GKRandomSource
+        .sharedRandom()
+        .arrayByShufflingObjects(in: lotteryBalls)
     print(shuffledBalls[0])
     print(shuffledBalls[1])
     print(shuffledBalls[2])
@@ -58,4 +60,14 @@ func testFunc()
     print(shuffledBalls[4])
     print(shuffledBalls[5])
     
+    //
+    let fixedLotteryBalls = [Int](1...49)
+    let fixedShuffledBalls = GKMersenneTwisterRandomSource(seed: 1001)
+        .arrayByShufflingObjects(in: fixedLotteryBalls)
+    print(fixedShuffledBalls[0])
+    print(fixedShuffledBalls[1])
+    print(fixedShuffledBalls[2])
+    print(fixedShuffledBalls[3])
+    print(fixedShuffledBalls[4])
+    print(fixedShuffledBalls[5])
 }
