@@ -40,7 +40,8 @@ func testFunc()
     let dCrazy = GKRandomDistribution(lowestValue: 1, highestValue: 11000)
     print(dCrazy.nextInt())
     
-    //prints rando numbers from 1 to 6 in a random order
+    //prints rando numbers from 1 to 6 in a random order and you'll see every # @ least once.
+    //gkshuffleddistribution is called a "fair distriubtion" b/c every number will appear once.
     let shuffled = GKShuffledDistribution.d6()
     print(shuffled.nextInt())
     print(shuffled.nextInt())
