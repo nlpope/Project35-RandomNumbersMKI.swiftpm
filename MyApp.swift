@@ -29,4 +29,14 @@ func testFunc()
     //more complex and more random number btwn 0 & 20
     let mersenne = GKMersenneTwisterRandomSource()
     print(mersenne.nextInt(upperBound: 20))
+    
+    //randomly rolling a 6sided dice
+    let d6 = GKRandomDistribution.d6()
+    print(d6.nextInt())
+    //randomly rolling a 20sided dice
+    let d20 = GKRandomDistribution.d20()
+    print(d20.nextInt())
+    //randomly rolling an 11k sided dice
+    let dCrazy = GKRandomDistribution(lowestValue: 1, highestValue: 11000)
+    print(dCrazy.nextInt())
 }
