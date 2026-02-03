@@ -39,4 +39,11 @@ func testFunc()
     //randomly rolling an 11k sided dice
     let dCrazy = GKRandomDistribution(lowestValue: 1, highestValue: 11000)
     print(dCrazy.nextInt())
+    
+    //prints rando numbers from 1 to 6 in a random order
+    let shuffled = GKShuffledDistribution.d6()
+    print(shuffled.nextInt())
+    print(shuffled.nextInt())
+    print(shuffled.nextInt())
+    print(shuffled.nextInt())
 }
