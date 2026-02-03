@@ -50,8 +50,7 @@ func testFunc()
     
     //ex func for array shuffle
     let lotteryBalls = [Int](1...49)
-    let shuffledBalls = GKRandomSource.sharedRandom()
-    dom().arrayByShufflingObjects(in: lotteryBalls)
+    let shuffledBalls = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: lotteryBalls)
     print(shuffledBalls[0])
     print(shuffledBalls[1])
     print(shuffledBalls[2])
